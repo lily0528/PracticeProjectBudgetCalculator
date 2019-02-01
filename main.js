@@ -49,16 +49,6 @@ addButton.addEventListener('click',(e)=> {
     const value = addValue.value;
     if (description !== "" && parseInt(value) !== "" && parseInt(value) >= 0) {
         const myExpenses = new Expenses(description, value);
-    //  let htmlExpenses =
-    //         `<div class="item clearfix" id="expense-0">                     Wrong id, id's cannot be duplicate. Must give each record a unique id!
-    //     <div class="item__description">${myExpenses.description}</div>
-    //     <div class="right clearfix">
-    //         <div class="item__value">${myExpenses.value}</div>
-    //         <div class="item__delete">
-    //             <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>   //In order to identify each record, you must add a unique date according to its parent's id.
-    //         </div>
-    //     </div>
-    // </div>`
 
     // check budget type and set different id's for incomes and expenses
     let idStr = '';
@@ -94,15 +84,7 @@ addButton.addEventListener('click',(e)=> {
         }
     }
 });
-//f (delButton !== ""){
-//    delButton.addEventListener('click', function () {
- //       for(let i = 0; i <= incomeId; i++){
- //           if (delButton[i].onclick = true){
- //               choiceItemsIncome[i].remove;
- //           }
-  //      }  
-  //  });
-//} 
+
 document.body.addEventListener('click',(e)=>{
     // if(e.target.classlist.contain('delButton')){        'delButton' is not a class name! 'contain' should be 'contains'! 'classlist' should be 'classList'! 
     console.log(e.target)
